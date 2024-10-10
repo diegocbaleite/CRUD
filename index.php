@@ -48,7 +48,7 @@ if ($sql->rowCount() > 0) {
                         <td><?= htmlspecialchars($usuario['email']); ?></td>
                         <td>
                             <a href="editar.php?id=<?= $usuario['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="excluir.php?id=<?= $usuario['id']; ?>" class="btn btn-danger">Excluir</a>
+                            <a href="excluir.php?id=<?= $usuario['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')" class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
